@@ -1,0 +1,23 @@
+.nav {
+  background-color: lawngreen;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  background-color: red;
+  height: 90vh;
+}
+
+.sidebar {
+  background-color: blueviolet;
+  // width: 10vw;
+  flex-grow: 1;
+}
+
+.main {
+  background-color: goldenrod;
+  // width: 90vw;
+  flex-grow: 5;
+}
