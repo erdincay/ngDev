@@ -17,7 +17,7 @@ export class DirectivesComponent implements OnInit {
   ngOnInit() {}
 
   changeColor() {
-    this.bgcolor = this.bgcolor == 'blue' ? 'red' : 'blue';
+    this.bgcolor = this.bgcolor === 'blue' ? 'red' : 'blue';
   }
 
   changeClass() {

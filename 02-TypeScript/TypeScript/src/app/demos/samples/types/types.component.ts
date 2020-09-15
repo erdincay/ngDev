@@ -212,7 +212,7 @@ export class TypesComponent implements OnInit {
     }
 
     for (const i of list) {
-      console.log(i); // "4", "5", "6"  -> for ... of loop returns element
+      console.log(list[i]); // "4", "5", "6"  -> for ... of loop returns element
     }
 
     // array destructuring

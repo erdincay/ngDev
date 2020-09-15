@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../persons/person.model';
 import { PersonService } from '../persons/person.service';
-import { of } from 'rxjs';
+import { of, Observable } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
 @Component({
@@ -16,6 +16,11 @@ export class BindingComponent implements OnInit {
   persons: Person[];
   selectedPerson: Person = { id: 0, name: '', age: 0, gender: '' };
   latePerson: Person;
+  otherPerson: Observable<{ name: string; age: number; gender: string }> = of({
+    name: 'Erdinc',
+    age: 13,
+    gender: 'male',
+  }).pipe(delay(3000));
   isActive: boolean = false;
 
   ngOnInit() {

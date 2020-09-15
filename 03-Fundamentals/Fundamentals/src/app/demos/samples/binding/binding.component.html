@@ -32,6 +32,21 @@
 
 <mat-card>
   <mat-card-header>
+    <mat-card-title
+      >Binding Nullable Types - {{ (otherPerson | async)?.name }} Arriving Other
+      Person</mat-card-title
+    >
+  </mat-card-header>
+
+  <mat-card-content>
+    <div *ngIf="(otherPerson | async) != null">
+      <pre>{{ otherPerson | async | json }}</pre>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
     <mat-card-title>
       Show and hide - Prop Binding - click buttons
     </mat-card-title>
@@ -49,9 +64,7 @@
 
 <mat-card>
   <mat-card-header>
-    <mat-card-title>
-      Bindings - Try change text
-    </mat-card-title>
+    <mat-card-title> Bindings - Try change text </mat-card-title>
   </mat-card-header>
   <mat-card-content fxLayout="column">
     <mat-form-field>
@@ -88,9 +101,7 @@
 
 <mat-card>
   <mat-card-header>
-    <mat-card-title>
-      Bindings Radio Button Groups
-    </mat-card-title>
+    <mat-card-title> Bindings Radio Button Groups </mat-card-title>
   </mat-card-header>
   <input
     type="radio"
@@ -111,9 +122,7 @@
 
 <mat-card>
   <mat-card-header>
-    <mat-card-title>
-      Bindings Select
-    </mat-card-title>
+    <mat-card-title> Bindings Select </mat-card-title>
   </mat-card-header>
   <select [(ngModel)]="selectedPerson">
     <option *ngFor="let p of persons" [ngValue]="p">{{ p.name }}</option>
@@ -124,9 +133,7 @@
 
 <mat-card>
   <mat-card-header>
-    <mat-card-title>
-      Bindings Checkboxes
-    </mat-card-title>
+    <mat-card-title> Bindings Checkboxes </mat-card-title>
   </mat-card-header>
   <input type="checkbox" [(ngModel)]="isActive" /> <br />
   Current State: {{ isActive }}

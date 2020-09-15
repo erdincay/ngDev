@@ -4,6 +4,8 @@
 
 ## Configure Creation of Unit Test Files - \*.spec.ts
 
+[Frequently-used modules](https://angular.io/guide/frequent-ngmodules)
+
 Method 1:
 
 You can disable spec generation at the time of creating things using Angular-cli by adding "--no-spec"

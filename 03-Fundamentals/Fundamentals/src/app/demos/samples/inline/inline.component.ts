@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
       </mat-card-header>
       <mat-card-content>
         By using backticks I can use mulitline text
+        {{ title | uppercase }}
       </mat-card-content>
     </mat-card>
   `,

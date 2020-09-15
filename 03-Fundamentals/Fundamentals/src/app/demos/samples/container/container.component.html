@@ -4,7 +4,7 @@
 ></app-persons-list>
 
 <app-person-edit
-  *ngIf="current"
+  *ngIf="current != null"
   [person]="current"
   [editMode]="true"
   (savePerson)="onPersonSaved($event)"
