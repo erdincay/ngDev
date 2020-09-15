@@ -1,0 +1,29 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "name": "Apfel",
+      "price": 10.5
+    },
+    {
+      "id": 2,
+      "name": "Birne",
+      "price": 12
+    },
+    {
+      "id": 3,
+      "name": "Kürbis",
+      "price": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profiles": {
+    "name": "hansi"
+  }
+}
