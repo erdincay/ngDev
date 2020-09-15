@@ -1,0 +1,19 @@
+<div class="food-list">
+  <h1>Food List</h1>
+  <table>
+    <ng-container *ngFor="let f of foods">
+      <tr>
+        <td>{{ f.id }}</td>
+        <td>{{ f.name }}</td>
+        <td>{{ f.price }}</td>
+        <td>
+          <button mat-raised-button (click)="onEdit(f)">bearbeiten</button>
+        </td>
+      </tr>
+    </ng-container>
+  </table>
+</div>
+
+<!--ng-container *ngIf="foods != null">
+    <title>This is the Food List</title>
+</!--ng-container-->
