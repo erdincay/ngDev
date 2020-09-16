@@ -1,6 +1,36 @@
 <div class="food-list">
   <h1>Food List</h1>
-  <table>
+
+  <table mat-table [dataSource]="foods">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef>Date</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.price | currency }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button (click)="onEdit(element)">Edit</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <!--table>
     <ng-container *ngFor="let f of foods">
       <tr>
         <td>{{ f.id }}</td>
@@ -11,9 +41,5 @@
         </td>
       </tr>
     </ng-container>
-  </table>
+  </table-->
 </div>
-
-<!--ng-container *ngIf="foods != null">
-    <title>This is the Food List</title>
-</!--ng-container-->

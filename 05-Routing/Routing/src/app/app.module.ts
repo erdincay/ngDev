@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  DropTargetOptions,
+  MineTypeEnum,
+  NgxUploadModule,
+} from '@wkoza/ngx-upload';
 import { CKEditorModule } from 'ngx-ckeditor';
 import { AdminComponent } from './admin/admin.component';
 import { AdminModule } from './admin/admin.module';
@@ -15,14 +20,6 @@ import { EditorComponent } from './shared/editor/editor.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { UploaderComponent } from './shared/uploader/uploader.component';
-import { SkillRowComponent } from './skills/skill-row/skill-row.component';
-import { SkillsEditComponent } from './skills/skills-edit/skills-edit.component';
-import { SkillsListComponent } from './skills/skills-list/skills-list.component';
-import {
-  NgxUploadModule,
-  MineTypeEnum,
-  DropTargetOptions,
-} from '@wkoza/ngx-upload';
 import { SkillResolverService } from './skills/skill-resolver.service';
 
 export const ngxDropTargetOptions: DropTargetOptions = {
@@ -41,9 +38,6 @@ export const ngxDropTargetOptions: DropTargetOptions = {
     EditorComponent,
     UploaderComponent,
     AdminComponent,
-    SkillsListComponent,
-    SkillsEditComponent,
-    SkillRowComponent,
   ],
   imports: [
     BrowserModule,

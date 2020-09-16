@@ -1,10 +1,12 @@
-<app-food-list
-  [foods]="foods"
-  (foodSelected)="onFoodSelected($event)"
-></app-food-list>
+<mat-card>
+  <app-food-list
+    [foods]="foods"
+    (foodSelected)="onFoodSelected($event)"
+  ></app-food-list>
 
-<app-food-edit
-  *ngIf="current != null"
-  [food]="current"
-  (saveFood)="onFoodSaved($event)"
-></app-food-edit>
+  <app-food-edit
+    *ngIf="current != null"
+    [food]="current"
+    (saveFood)="onFoodSaved($event)"
+  ></app-food-edit>
+</mat-card>

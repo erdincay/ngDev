@@ -1,0 +1,18 @@
+.mainwindow {
+  background-color: lightblue;
+  height: 100vh;
+  width: 100vw;
+}
+
+.navigationplane {
+  display: flex;
+  background-color: lightcyan;
+  flex-flow: row;
+}
+
+.contentarea {
+  background-color: lightseagreen;
+  display: flex;
+  flex-flow: row;
+  width: 100vw;
+}

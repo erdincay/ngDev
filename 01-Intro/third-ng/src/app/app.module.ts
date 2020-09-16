@@ -9,6 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
 import { FormsModule } from '@angular/forms';
+import { NavigationComponent } from './navigation/navigation.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,8 @@ import { FormsModule } from '@angular/forms';
     FoodContainerComponent,
     FoodListComponent,
     FoodEditComponent,
+    NavigationComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +29,8 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    AppRoutingModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
